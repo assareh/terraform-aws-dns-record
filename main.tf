@@ -15,3 +15,5 @@ resource "aws_route53_record" "record" {
   records = [var.record_value]
   ttl     = var.ttl
 }
+
+output "record" { value = aws_route53_record.record.fqdn }
